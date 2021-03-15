@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${DOCKER_EXPOSE_PORT?8000}:8000"
+    networks:
+      emperor-net:
+
+networks:
+  emperor-net:
