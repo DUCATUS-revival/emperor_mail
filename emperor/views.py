@@ -5,7 +5,6 @@ from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 from django.core.mail import send_mail
 from django.core.mail import get_connection
-from django.core.mail import send_mail
 from emperor.settings import EMAIL_HOST, EMPEROR_HOST_USER, EMPEROR_HOST_PASSWORD, EMPEROR_MAIL, EMAIL_PORT, EMAIL_USE_TLS
 
 
@@ -35,8 +34,7 @@ def get_emperor_mail_connection():
 @api_view(http_method_names=['POST'])
 def emperor_contact_us(request):
     '''
-    view for contact us form, which sends message to shop's email.
-    Placed in store because I didn't found better place.
+    view for contact us form
     '''
     request_data = request.data
     name = request_data.get('name')
