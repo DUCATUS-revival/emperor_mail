@@ -35,8 +35,7 @@ def get_emperor_mail_connection():
 @api_view(http_method_names=['POST'])
 def emperor_contact_us(request):
     '''
-    view for contact us form, which sends message to shop's email.
-    Placed in store because I didn't found better place.
+    view for contact us form
     '''
     request_data = request.data
     name = request_data.get('name')
