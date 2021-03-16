@@ -5,7 +5,6 @@ from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 from django.core.mail import send_mail
 from django.core.mail import get_connection
-from django.core.mail import send_mail
 from emperor.settings import EMAIL_HOST, EMPEROR_HOST_USER, EMPEROR_HOST_PASSWORD, EMPEROR_MAIL, EMAIL_PORT, EMAIL_USE_TLS
 
 
